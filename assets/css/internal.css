@@ -1,11 +1,6 @@
 /* ÁREA DE IMPORT */
 @import url('./reset.css');
 @import url('./global.css');
-@import url('./componentes/_navigator.css');
-@import url('./componentes/_pills.css');
-@import url('./componentes/_link-button.css');
-@import url('./componentes/_gallery.css');
-
 
 
 /* CLASSE WRAPPER [EMPACOTAMENTO] */
@@ -95,6 +90,154 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+}
+
+
+
+/* ESTILIZAÇÃO DO NAVIGATOR */
+.navigator {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.navigator::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: white;
+    z-index: 0;
+}
+
+.navigator .navigator__icon {
+    position: absolute;
+    top: -20px;
+}
+
+.navigator ul {
+    z-index: 1;
+}
+
+.navigator ul li:first-child {
+    margin-top: 0;
+}
+
+.navigator ul li {
+    margin: 60px 0;
+}
+
+.navigator ul li:last-child {
+    margin-bottom: 0;
+}
+
+.navigator ul li a {
+    color: #fff;
+    background-color: #000;
+    width: 45px;
+    height: 45px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigator ul li a:hover
+, .navigator ul li a.active {
+    color: var(--primary-color);
+    background-color: #fff;
+    border: .1875rem solid #000;
+    outline: .125rem solid #fff;
+}
+
+
+
+/* ESTILIZAÇÃO DOS "PILLS" */
+.pills ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.pills ul li {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 5px 15px;
+    margin: 0 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.pills ul li:first-child {
+    margin-left: 0;
+}
+
+
+
+/* ESTILIZAÇÃO DO LINK BUTTON */
+a.link-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+a.link-button .icon {
+    width: 32px;
+    height: 32px;
+    padding: 3px;
+    background-color: var(--primary-color);
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-clip: content-box;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a.link-button .icon .play-icon {
+    border: 7px solid #fff;
+    width: 0;
+    height: 0;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    margin-right: -7px;
+}
+
+a.link-button .label {
+    margin-left: 10px;
+}
+
+
+
+/* ESTILIZAÇÃO DA GALERIA */
+.gallery {
+    padding: 20px;
+    padding-left: 0;
+}
+
+.gallery ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.gallery ul li {
+    margin-left: 25px;
+}
+
+.gallery ul li:first-child {
+    margin-left: 0;
+}
+
+.gallery ul li a img {
+    border: 6px solid #fff;
+    border-radius: 15px;
 }
 
 
