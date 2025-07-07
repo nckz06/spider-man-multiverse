@@ -1,9 +1,10 @@
+/* ÁREA DE IMPORT */
 @import url('./reset.css');
 @import url('./global.css');
-@import url('componentes/_navigator.css');
-@import url('componentes/_pills.css');
-@import url('componentes/_link-button.css');
-@import url('componentes/_gallery.css');
+@import url('./componentes/_navigator.css');
+@import url('./componentes/_pills.css');
+@import url('./componentes/_link-button.css');
+@import url('./componentes/_gallery.css');
 
 
 
