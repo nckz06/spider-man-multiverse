@@ -52,7 +52,7 @@
 
     <!-- CONSTRUÇÃO DO CONTROLE DO CARROSSEL -->
     <div class="controller">
-        <div id="next" class="controller__button">
+        <div id="next" onclick="selectCarouselItem(this)" class="controller__button">
             next
         </div>
         <div id="1" onclick="selectCarouselItem(this)" class="controller__button controller__button--active">
@@ -64,7 +64,7 @@
         <div id="3" onclick="selectCarouselItem(this)" class="controller__button">
             03
         </div>
-        <div id="prev" class="controller__button">
+        <div id="prev" onclick="selectCarouselItem(this)" class="controller__button">
             prev
         </div>
         <div class="controller__line"></div>
