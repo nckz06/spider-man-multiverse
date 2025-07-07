@@ -6,6 +6,8 @@
     <title>Spider Man | Multiverso</title>
     <link rel="stylesheet" href="./assets/css/homepage-style.css">
     <link rel="shortcut icon" href="./assets/images/icons/spider.svg" type="image/svg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_back_ios"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward_ios" />
 </head>
 <body>
     <!-- CONSTRUÇÃO DO MENU -->
@@ -53,7 +55,9 @@
     <!-- CONSTRUÇÃO DO CONTROLE DO CARROSSEL -->
     <div class="controller">
         <div id="prev" onclick="selectCarouselItem(this)" class="controller__button">
-            prev
+            <span class="material-symbols-outlined">
+                arrow_back_ios
+            </span>
         </div>
         <div id="1" onclick="selectCarouselItem(this)" class="controller__button controller__button--active">
             01
@@ -65,7 +69,9 @@
             03
         </div>
         <div id="next" onclick="selectCarouselItem(this)" class="controller__button">
-            next
+            <span class="material-symbols-outlined">
+                arrow_forward_ios
+            </span>
         </div>
         <div class="controller__line"></div>
     </div>

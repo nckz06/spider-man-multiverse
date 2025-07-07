@@ -155,6 +155,7 @@ body::before {
     transform: scale(1.3);
 }
 
+.controller__button:hover,
 .controller__button--active {
     background-color: #fff;
     color: var(--primary-color);
