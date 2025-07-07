@@ -1,0 +1,140 @@
+@import url('./reset.css');
+@import url('./global.css');
+@import url('componentes/_navigator.css');
+@import url('componentes/_pills.css');
+@import url('componentes/_link-button.css');
+@import url('componentes/_gallery.css');
+
+
+
+/* CLASSE WRAPPER [EMPACOTAMENTO] */
+.wrapper {
+    display: flex;
+    height: 100vh;
+    flex-flow: row nowrap;
+}
+
+.wrapper video {
+    position: fixed;
+    width: 100%;
+}
+
+
+
+/* ESTILIZAÇÃO DA COLUNA ESQUERDA */
+.wrapper .left-column {
+    width: 100px;
+    height: 100%;
+    /* background-color: #000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    padding-right: 50px;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+
+
+/* ESTILIZAÇÃO DO CONTEÚDO PRINCIPAL */
+.wrapper .main-content {
+    height: 100%;
+    width: 100%;
+    /* background-color: gray; */
+    padding-left: 130px;
+    position: relative;
+}
+
+/* Conteúdo do topo (Sinopse e trailer) */
+.main-content .main-content__top {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.main-content__top .logo img {
+    margin-top: 50px;
+    margin-left: 0;
+    margin-bottom: 30px;
+}
+
+.main-content__top .description {
+    background-color: rgba(0, 0, 0, .7);
+    max-width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.main-content__top .description .description__text p {
+    color: #fff;
+    line-height: 170%;
+    text-align: justify;
+}
+
+.main-content__top .description .pills {
+    margin-bottom: 20px;
+}
+
+.main-content__top .links {
+    padding: 20px;
+    padding-left: 0;
+}
+
+.main-content__top .links ul {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Conteúdo de baixo (Galeria) */
+.main-content .main-content__bottom {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+
+/* IMAGENS DE FUNDO DA PÁGINA */
+.spiderman-01-01 { 
+    background-image: url('../images/spiderman-tobey/movie-01/background.png');
+    background-size: cover;
+}
+
+.spiderman-01-02 { 
+    background-image: url('../images/spiderman-tobey/movie-02/background.png');
+    background-size: cover;
+}
+
+.spiderman-01-03 { 
+    background-image: url('../images/spiderman-tobey/movie-03/background.png');
+    background-size: cover;
+}
+
+.spiderman-02-01 { 
+    background-image: url('../images/spiderman-andrew/movie-01/background.png');
+    background-size: cover;
+}
+
+.spiderman-02-02 { 
+    background-image: url('../images/spiderman-andrew/movie-02/background.png');
+    background-size: cover;
+}
+
+.spiderman-03-01 { 
+    background-image: url('../images/spiderman-tom/movie-01/background.png');
+    background-size: cover;
+}
+
+.spiderman-03-02 { 
+    background-image: url('../images/spiderman-tom/movie-02/background.png');
+    background-size: cover;
+}
+
+.spiderman-03-03 { 
+    background-image: url('../images/spiderman-tom/movie-03/background.png');
+    background-size: cover;
+}
