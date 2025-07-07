@@ -40,18 +40,18 @@ function selectCarouselItem(selectedItemButton) {
     if (selectedItem == 1 || selectedItem == 2 || selectedItem == 3) {
         rotateYDeg = -120 * (Number(selectedItem) - 1)
     } else if (selectedItem == 'next') {
-        card += 1;
-        
         if (card == 2) {
             card = 0
+        } else {
+            card += 1;
         }
 
         rotateYDeg = -120 * (card)
     } else if (selectedItem == 'prev') {
-        card -= 1
-
         if (card == 0) {
             card = 2
+        } else {
+            card -= 1
         }
 
         rotateYDeg = -120 * (card)
