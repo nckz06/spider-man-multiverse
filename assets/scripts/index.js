@@ -34,11 +34,36 @@ function selectCarouselItem(selectedItemButton) {
     const carousel = document.querySelector('.cards-carousel')
     const transform = carousel.style.transform
     const rotateY = transform.match(/rotateY\((-?\d+deg)\)/i)
-    const rotateYDeg = -120 * (Number(selectedItem) - 1)
-    const newTransform = transform.replace(rotateY[0], `rotateY(${rotateYDeg}deg)`)
-    const controllerButtonActive = document.querySelector('.controller__button--active')
+    const rotateYDeg
+    const card = 0
 
+    if (selectedItem == 1 || selectedItem == 2 || selectedItem == 3) {
+        rotateYDeg = -120 * (Number(selectedItem) - 1)
+    } else if (selectedItem == 'next') {
+        card += 1;
+        
+        if (card == 2) {
+            card = 0
+        }
+
+        rotateYDeg = -120 * (card)
+    } else if (selectedItem == 'prev') {
+        card -= 1
+
+        if (card == 0) {
+            card = 2
+        }
+
+        rotateYDeg = -120 * (card)
+    }
+
+    const newTransform = transform.replace(rotateY[0], `rotateY(${rotateYDeg}deg)`)
+    
     carousel.style.transform = newTransform
+    
+    // PROCESSO DE ESTILIZAÇÃO DOS BOTÕES DE NAVEGAÇÃO
+    const controllerButtonActive = document.querySelector('.controller__button--active')
+    
     controllerButtonActive.classList.remove('controller__button--active')
     selectedItemButton.classList.add('controller__button--active')
 }
