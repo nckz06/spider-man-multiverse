@@ -1,3 +1,6 @@
+var card = 0
+var rotateYDeg = 0
+
 // --------------- CARD HOVER ANIMATION ----------------
 
 // ÁREA DAS FUNÇÕES
@@ -34,8 +37,6 @@ function selectCarouselItem(selectedItemButton) {
     const carousel = document.querySelector('.cards-carousel')
     const transform = carousel.style.transform
     const rotateY = transform.match(/rotateY\((-?\d+deg)\)/i)
-    var rotateYDeg = 0
-    const card = 0
 
     if (selectedItem == 1 || selectedItem == 2 || selectedItem == 3) {
         rotateYDeg = -120 * (Number(selectedItem) - 1)
@@ -67,5 +68,3 @@ function selectCarouselItem(selectedItemButton) {
     controllerButtonActive.classList.remove('controller__button--active')
     selectedItemButton.classList.add('controller__button--active')
 }
-
-// OPERAÇÃO PARA CARREGAR O JS NOS BOTÕES
