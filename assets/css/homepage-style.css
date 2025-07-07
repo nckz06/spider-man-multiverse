@@ -37,6 +37,10 @@ body::before {
     margin: 0 1.25rem;
 }
 
+.menu__item:hover {
+    text-decoration: underline #fff;
+}
+
 .menu__icon {
     width: 2.5rem;
     margin: 0 1.25rem;
