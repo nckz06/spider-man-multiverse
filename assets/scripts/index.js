@@ -34,7 +34,7 @@ function selectCarouselItem(selectedItemButton) {
     const carousel = document.querySelector('.cards-carousel')
     const transform = carousel.style.transform
     const rotateY = transform.match(/rotateY\((-?\d+deg)\)/i)
-    var rotateYDeg;
+    var rotateYDeg = 0
     const card = 0
 
     if (selectedItem == 1 || selectedItem == 2 || selectedItem == 3) {
