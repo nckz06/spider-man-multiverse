@@ -147,7 +147,7 @@ body::before {
     margin: 0 1.5rem;
 }
 
-.controller__button .arrow_next {
+.controller__button .arrow_prev {
     width: 0;
     height: 0;
     border: 7px solid #fff;
@@ -157,7 +157,7 @@ body::before {
     margin-left: -7px;
 }
 
-.controller__button .arrow_prev {
+.controller__button .arrow_next {
     width: 0;
     height: 0;
     border: 7px solid #fff;
@@ -181,6 +181,16 @@ body::before {
     color: var(--primary-color);
     border: 0.1875rem solid #000;
     outline: .125rem solid #fff;
+}
+
+.controller__button .arrow_next:hover {
+    background-color: #fff;
+    border-left-color: var(--primary-color);
+}
+
+.controller__button .arrow_prev:hover {
+    background-color: #fff;
+    border-right-color: var(--primary-color);
 }
 
 .controller__line {
