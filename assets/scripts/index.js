@@ -37,12 +37,14 @@ function selectCarouselItem(selectedItemButton) {
     const carousel = document.querySelector('.cards-carousel')
     const transform = carousel.style.transform
     const rotateY = transform.match(/rotateY\((-?\d+deg)\)/i)
-    
+    const activedButton = document.querySelector('.controller__button--active')
+
     if (selectedItem == 1 || selectedItem == 2 || selectedItem == 3) {
-        rotateYDeg = -120 * (Number(selectedItem) - 1)
+        card = Number(selectedItem) - 1
+        rotateYDeg = -120 * (card)
         
         // PROCESSO DE ESTILIZAÇÃO DOS BOTÕES DE NAVEGAÇÃO    
-        document.querySelector('.controller__button--active').classList.remove('controller__button--active')
+        activedButton.classList.remove('controller__button--active')
         selectedItemButton.classList.add('controller__button--active')
     } else if (selectedItem == 'next') {
         if (card == 2) {
@@ -54,8 +56,8 @@ function selectCarouselItem(selectedItemButton) {
         rotateYDeg = -120 * (card)
         
         // PROCESSO DE ESTILIZAÇÃO DOS BOTÕES DE NAVEGAÇÃO    
-        document.querySelector('.controller__button--active').classList.remove('controller__button--active')
-        document.getElementById(card + 1).classList.add('controller_button--active')
+        activedButton.classList.remove('controller__button--active')
+        document.getElementById(card + 1).classList.add('controller__button--active')
     } else if (selectedItem == 'prev') {
         if (card == 0) {
             card = 2
@@ -66,7 +68,7 @@ function selectCarouselItem(selectedItemButton) {
         rotateYDeg = -120 * (card)
         
         // PROCESSO DE ESTILIZAÇÃO DOS BOTÕES DE NAVEGAÇÃO
-        document.querySelector('.controller__button--active').classList.remove('controller__button--active')
+        activedButton.classList.remove('controller__button--active')
         document.getElementById(card + 1).classList.add('controller__button--active')
     }
     
