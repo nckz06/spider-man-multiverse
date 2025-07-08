@@ -52,7 +52,10 @@ function selectCarouselItem(selectedItemButton) {
         }
         
         rotateYDeg = -120 * (card)
-
+        
+        // PROCESSO DE ESTILIZAÇÃO DOS BOTÕES DE NAVEGAÇÃO    
+        controllerButtonActive.classList.remove('controller__button--active')
+        document.getElementById(card + 1).classList.add('controller_button--active')
     } else if (selectedItem == 'prev') {
         if (card == 0) {
             card = 2
@@ -61,11 +64,12 @@ function selectCarouselItem(selectedItemButton) {
         }
         
         rotateYDeg = -120 * (card)
+
+        // PROCESSO DE ESTILIZAÇÃO DOS BOTÕES DE NAVEGAÇÃO
+        controllerButtonActive.classList.remove('controller__button--active')
+        document.getElementById(card).classList.add('controller__button--active')
     }
     
-    // PROCESSO DE ESTILIZAÇÃO DOS BOTÕES DE NAVEGAÇÃO    
-    controllerButtonActive.classList.remove('controller__button--active')
-    document.getElementById(card + 1).classList.add('controller_button--active')
 
     // TROCA DOS CARDS
     const newTransform = transform.replace(rotateY[0], `rotateY(${rotateYDeg}deg)`)
