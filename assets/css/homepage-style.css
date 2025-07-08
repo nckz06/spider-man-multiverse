@@ -183,12 +183,12 @@ body::before {
     outline: .125rem solid #fff;
 }
 
-.controller__button .arrow_next:hover {
+.controller__button:hover .arrow_next {
     background-color: #fff;
     border-left-color: var(--primary-color);
 }
 
-.controller__button .arrow_prev:hover {
+.controller__button:hover .arrow_prev {
     background-color: #fff;
     border-right-color: var(--primary-color);
 }
