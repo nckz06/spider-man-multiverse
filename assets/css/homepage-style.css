@@ -147,6 +147,26 @@ body::before {
     margin: 0 1.5rem;
 }
 
+.controller__button .arrow_next {
+    width: 0;
+    height: 0;
+    border: 7px solid #fff;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    margin-left: -7px;
+}
+
+.controller__button .arrow_prev {
+    width: 0;
+    height: 0;
+    border: 7px solid #fff;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    margin-right: -7px;
+}
+
 .controller__button:last-child {
     margin-right: 0;
 }
