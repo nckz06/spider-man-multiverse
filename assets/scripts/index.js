@@ -5,13 +5,17 @@ var rotateYDeg = 0
 
 // ÁREA DAS FUNÇÕES
 function handleMouseEnter() {
-    this.classList.add('card--hovered')
-    document.body.id = `${this.id}--hovered`
+    if (this.classList.contains('center')) {
+        this.classList.add('card--hovered')
+        document.body.id = `${this.id}--hovered`
+    }
 }
 
 function handleMouseLeave() {
-    this.classList.remove('card--hovered')
-    document.body.id = ''
+    if (this.classList.contains('center')) {
+        this.classList.remove('card--hovered')
+        document.body.id = ''
+    }
 }
 
 function addEventListenersToCard() {
@@ -38,6 +42,7 @@ function selectCarouselItem(selectedItemButton) {
     const transform = carousel.style.transform
     const rotateY = transform.match(/rotateY\((-?\d+deg)\)/i)
     const activedButton = document.querySelector('.controller__button--active')
+    const itemCarouselCenter = document.querySelector('.center')
 
     if (selectedItem == 1 || selectedItem == 2 || selectedItem == 3) {
         card = Number(selectedItem) - 1
@@ -45,7 +50,9 @@ function selectCarouselItem(selectedItemButton) {
         
         // PROCESSO DE ESTILIZAÇÃO DOS BOTÕES DE NAVEGAÇÃO    
         activedButton.classList.remove('controller__button--active')
+        itemCarouselCenter.classList.remove('center')
         selectedItemButton.classList.add('controller__button--active')
+        document.getElementById(`spider-man-0${selectedItem}`).classList.add('center')
     } else if (selectedItem == 'next') {
         if (card == 2) {
             card = 0
@@ -57,7 +64,9 @@ function selectCarouselItem(selectedItemButton) {
         
         // PROCESSO DE ESTILIZAÇÃO DOS BOTÕES DE NAVEGAÇÃO    
         activedButton.classList.remove('controller__button--active')
+        itemCarouselCenter.classList.remove('center')
         document.getElementById(card + 1).classList.add('controller__button--active')
+        document.getElementById(`spider-man-0${card + 1}`).classList.add('center')
     } else if (selectedItem == 'prev') {
         if (card == 0) {
             card = 2
@@ -69,7 +78,9 @@ function selectCarouselItem(selectedItemButton) {
         
         // PROCESSO DE ESTILIZAÇÃO DOS BOTÕES DE NAVEGAÇÃO
         activedButton.classList.remove('controller__button--active')
+        itemCarouselCenter.classList.remove('center')
         document.getElementById(card + 1).classList.add('controller__button--active')
+        document.getElementById(`spider-man-0${card + 1}`).classList.add('center')
     }
     
 
