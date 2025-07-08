@@ -42,8 +42,7 @@ function selectCarouselItem(selectedItemButton) {
         rotateYDeg = -120 * (Number(selectedItem) - 1)
         
         // PROCESSO DE ESTILIZAÇÃO DOS BOTÕES DE NAVEGAÇÃO    
-        let controllerButtonActive = document.querySelector('.controller__button--active')
-        controllerButtonActive.classList.remove('controller__button--active')
+        document.querySelector('.controller__button--active').classList.remove('controller__button--active')
         selectedItemButton.classList.add('controller__button--active')
     } else if (selectedItem == 'next') {
         if (card == 2) {
@@ -55,8 +54,7 @@ function selectCarouselItem(selectedItemButton) {
         rotateYDeg = -120 * (card)
         
         // PROCESSO DE ESTILIZAÇÃO DOS BOTÕES DE NAVEGAÇÃO    
-        let controllerButtonActive = document.querySelector('.controller__button--active')
-        controllerButtonActive.classList.remove('controller__button--active')
+        document.querySelector('.controller__button--active').classList.remove('controller__button--active')
         document.getElementById(card + 1).classList.add('controller_button--active')
     } else if (selectedItem == 'prev') {
         if (card == 0) {
@@ -68,8 +66,7 @@ function selectCarouselItem(selectedItemButton) {
         rotateYDeg = -120 * (card)
         
         // PROCESSO DE ESTILIZAÇÃO DOS BOTÕES DE NAVEGAÇÃO
-        let controllerButtonActive = document.querySelector('.controller__button--active')
-        controllerButtonActive.classList.remove('controller__button--active')
+        document.querySelector('.controller__button--active').classList.remove('controller__button--active')
         document.getElementById(card + 1).classList.add('controller__button--active')
     }
     
