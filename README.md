@@ -12,5 +12,6 @@ Neste projeto foram usados conceitos como:
 - Responsividade;
 - Entre outros conceitos
 
+<br><br>
 
-> - [Verifique agora mesmo o resultado final do projeto](https://nckz06.github.io/spider-man-multiverse/)
+> [Verifique agora mesmo o resultado final do projeto](https://nckz06.github.io/spider-man-multiverse/)
